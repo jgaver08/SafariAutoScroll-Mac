@@ -1,18 +1,15 @@
-let isScrolling = false;
-let scrollInterval;
+// popup.js
 
-function scrollPixels() {
-    // Adjust the values below as needed
-    window.scrollBy(0, 1); // Scroll 100 pixels vertically
-}
+alert('Popup script loaded!');
 
-function toggleScrolling() {
-    if (isScrolling) {
-        clearInterval(scrollInterval);
-    } else {
-        scrollInterval = setInterval(scrollPixels, 120); // Scroll every 1000 milliseconds (1 second)
-    }
-    isScrolling = !isScrolling;
-}
+document.addEventListener('DOMContentLoaded', function () {
+    alert('Popup script loaded!');
+    // Find the start button in the popup
+    const startButton = document.getElementById('startButton');
 
-document.getElementById('startButton').addEventListener('click', toggleScrolling);
+    // Add a click event listener to the start button
+    startButton.addEventListener('click', function () {
+        // Send a message to the content script to start scrolling
+        safari.extension.dispatchMessage('startScrolling');
+    });
+});

@@ -6,7 +6,11 @@
 	<dict>
 		<key>AutoscrollScript</key>
 		<dict>
-			<key>Script</key>
+			<key>Background</key>
+			<string>background.js</string>
+			<key>Content</key>
+			<string>content.js</string>
+			<key>Popup</key>
 			<string>popup.js</string>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
